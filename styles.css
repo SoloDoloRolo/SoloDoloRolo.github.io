@@ -4,12 +4,12 @@ body {
     background-color: #070707;
     color: #f9f9f9;
     margin: 0;
-    padding: 0 20px; /* Adjusted padding */
+    padding: 0 20px;
 }
 
 header {
     text-align: center;
-    padding: 50px 0; /* Added more spacing */
+    padding: 50px 0;
 }
 
 h1, h2 {
@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 h2 {
-    font-size: 1.8rem; /* Increased font size for better readability */
+    font-size: 1.8rem;
     letter-spacing: 2px;
 }
 
@@ -29,12 +29,32 @@ p, li {
 }
 
 section {
-    margin: 80px 0; /* Adjusted section margin for better spacing */
+    margin: 80px 0;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style-type: disc;
+    padding-left: 20px; /* Indented bullets for cleaner layout */
+}
+
+/* Responsive ASCII art - Scales down or hides on smaller screens */
+pre.ascii-art {
+    white-space: pre-wrap; /* Allows the ASCII art to wrap naturally */
+    overflow: hidden;
+    font-size: 12px; /* Default font size for larger screens */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    pre.ascii-art {
+        font-size: 8px; /* Scales ASCII text down on tablets/smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    pre.ascii-art {
+        display: none; /* Hides the ASCII art on small devices like phones */
+    }
 }
 
 /* Hover Effect for Action Words */
@@ -67,8 +87,8 @@ strong:hover::after {
 
 section {
     opacity: 0;
-    transform: translateY(40px); /* Adjusted the initial translation for smoother animation */
-    animation: slideUp 1.5s forwards ease-in-out; /* Increased animation duration */
+    transform: translateY(40px);
+    animation: slideUp 1.5s forwards ease-in-out;
 }
 
 @keyframes slideUp {
@@ -86,7 +106,7 @@ section {
 footer {
     text-align: center;
     margin-top: 80px;
-    padding-bottom: 40px; /* Added padding for footer */
+    padding-bottom: 40px;
 }
 
 a {
@@ -97,4 +117,27 @@ a {
 a:hover {
     color: #cfcfcf;
     text-decoration: underline;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Slightly smaller headers for mobile */
+    }
+
+    section {
+        margin: 40px 0; /* Reduce spacing for better mobile layout */
+    }
+
+    ul {
+        padding-left: 15px; /* Adjust bullet indentation for smaller screens */
+    }
+
+    p, li {
+        font-size: 0.9rem; /* Reduce text size slightly for better readability */
+    }
 }
