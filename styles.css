@@ -1,70 +1,62 @@
-/* Base Styles */
+/* Basic Styles */
 body {
-    font-family: 'Consolas', 'Lucida Console', 'Courier New', monospace;
-    color: #000;
-    background-color: #fff;
+    font-family: 'Knife Metal', monospace;
+    background-color: #070707;
+    color: #f9f9f9;
     margin: 0;
-    padding: 20px;
+    padding: 0 20px; /* Adjusted padding */
+}
+
+header {
+    text-align: center;
+    padding: 50px 0; /* Added more spacing */
 }
 
 h1, h2 {
-    text-align: center;
+    font-weight: bold;
     text-transform: uppercase;
-    font-weight: 700;
     margin: 20px 0;
 }
 
-p, li {
-    line-height: 1.6;
+h2 {
+    font-size: 1.8rem; /* Increased font size for better readability */
+    letter-spacing: 2px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+p, li {
+    line-height: 1.8;
+    margin: 0.5rem 0;
 }
 
 section {
-    margin: 40px 0;
+    margin: 80px 0; /* Adjusted section margin for better spacing */
 }
 
-/* Hover Action Words */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Hover Effect for Action Words */
 strong {
-    cursor: pointer;
     position: relative;
-    color: #000;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
 strong:hover {
-    color: #555;
+    color: #cfcfcf;
 }
 
 strong:hover::after {
     content: ' (Click to learn more)';
-    color: #777;
     font-size: 0.9em;
+    color: #aaa;
     position: absolute;
-    top: 0;
-    left: 100%;
-    padding-left: 5px;
+    left: 105%;
     animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Header and Footer Styling */
-header, footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f7f7f7;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #555;
-    text-decoration: underline;
 }
 
 /* Subtle Animations */
@@ -75,14 +67,14 @@ a:hover {
 
 section {
     opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 1s forwards;
+    transform: translateY(40px); /* Adjusted the initial translation for smoother animation */
+    animation: slideUp 1.5s forwards ease-in-out; /* Increased animation duration */
 }
 
 @keyframes slideUp {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
     100% {
         opacity: 1;
@@ -90,7 +82,19 @@ section {
     }
 }
 
-/* Smooth scrolling effect */
-html {
-    scroll-behavior: smooth;
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 40px; /* Added padding for footer */
+}
+
+a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cfcfcf;
+    text-decoration: underline;
 }
