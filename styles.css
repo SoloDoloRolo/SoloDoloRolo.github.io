@@ -1,0 +1,96 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+section {
+    margin: 40px 0;
+}
+
+/* Hover Action Words */
+strong {
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+strong:hover {
+    color: #555;
+}
+
+strong:hover::after {
+    content: ' (Click to learn more)';
+    color: #777;
+    font-size: 0.9em;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding-left: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header and Footer Styling */
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
